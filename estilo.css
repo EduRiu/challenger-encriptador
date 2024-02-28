@@ -1,0 +1,174 @@
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url(/img/fondoPagina.png);
+  background-size: cover;
+  background-position: center;
+}
+
+main{
+  display: flexbox;
+  padding-top: 25px;
+  align-content: space-between;
+  width: 97%;
+  margin: 0 15px 0 15px;
+}
+
+.titulo{
+  font-size: 50px;
+  text-align: center;
+  color: rgb(199, 197, 187);
+  text-shadow: 5px 5px #241905;
+}
+.contenedor {
+  display: grid;
+  grid-template: auto / 1fr 1fr 1fr;
+  grid-template-areas:
+    "input video output"
+    "botones botones botones";
+  grid-gap: 10px;
+  /* Espacio entre elementos */
+  border: 5px solid #8B4513;
+  /* Color marrón, ajusta el color según tu preferencia */
+  border-radius: 15px;
+  /* Puntas redondeadas */
+  padding: 15px;
+  /* Espaciado interno para el contenido dentro del contenedor */
+  position: relative;
+  /* Establece la posición relativa para que los elementos absolutos se ubiquen con respecto a este contenedor */
+  gap: 5px;
+  /* Agrega un espacio de 5px entre los elementos en la cuadrícula */
+  justify-content: space-evenly;
+  /* Distribuir elementos horizontalmente */
+  align-items: center;
+  /* Centrar elementos verticalmente */
+  background-size: cover;
+  background-position: center;
+  background-image: url(/img/fondoManquina.png);
+
+}
+
+.contenedor textarea {
+
+  width: 300px;
+  /* Establece el ancho fijo que desees */
+  height: 230px;
+  /* Establece la altura fija que desees */
+  resize: none;
+  /* Evita que el usuario redimensione el textarea */
+  border: 2px solid #5b3213;
+  /* Establece el grosor y color del borde */
+  border-radius: 5px;
+  /* Ajusta el radio de las esquinas del borde */
+  padding: 10px;
+  /* Añade espacio interno para que el texto no esté pegado al borde */
+  resize: none;
+  /* Evita que el usuario pueda redimensionar el textarea */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  /* Añade una sombra al textarea */
+ 
+}
+
+.contenedor textarea:focus{
+  box-shadow: 0 0 50px rgba(218, 126, 51, 0.9);
+ 
+}
+
+
+.input {
+  grid-area: input;
+  text-align: center;
+
+}
+
+.mi-input::placeholder {
+  color: #0f0202;
+  /* Cambia el color del placeholder */
+  font-size: 14px;
+  /* Cambia el tamaño de la fuente del placeholder */
+  font-style: italic;
+  /* Cambia el estilo de la fuente del placeholder */
+  text-align: justify;
+  /* Centra horizontalmente */
+  line-height: 100px;
+  /* Ajusta la altura según tus necesidades, debe ser igual a la altura del input */
+}
+
+
+.video {
+  grid-area: video;
+  width: 100%;
+  height: auto;
+  max-width: 200%;
+  object-fit: cover;
+  /* Ajusta la propiedad de objeto para el ajuste del contenido */
+  text-align: center;
+
+}
+
+.output {
+  grid-area: output;
+  text-align: center;
+
+}
+
+.botones {
+  grid-area: botones;
+  display: flex;
+  justify-content: center;
+  /* Puedes ajustar esto según tu diseño */
+  align-items: center;
+  /* Puedes ajustar esto según tu diseño */
+}
+
+.btn-encriptador,
+.btn-desencriptador {
+  margin: 5px;
+  /* Ajusta el espacio entre los botones según tus necesidades */
+  transition: 1s all;
+  cursor: pointer;
+  /*previo a la animacion de los botones*/
+}
+
+.btn-desencriptador:hover, .btn-encriptador:hover{
+  background-color: #ad6f35;
+  transform: scale(1.2);
+  /*animacion a los botones*/
+}
+
+.vidrio-templado {
+
+  background: rgba(255, 255, 255, 0.3);
+  /* Ajusta el color y la opacidad del fondo del vidrio templado */
+  border-radius: 10px;
+  /* Ajusta el radio de las esquinas para que parezca vidrio templado */
+  backdrop-filter: blur(10px);
+  /* Ajusta el desenfoque del vidrio templado */
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  /* Ajusta el color y la opacidad del borde del vidrio templado */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  /* Ajusta la sombra del vidrio templado */
+  color: #fff;
+  /* Ajusta el color del texto dentro del vidrio */
+  text-align: center;
+  padding: 20px;
+}
+
+.historial {
+  text-align: center; /* Alinea el contenido al centro */
+  margin-top: 50px; /* Ajusta la distancia desde la parte superior según sea necesario */
+}
+
+/* Puedes agregar estilos adicionales según tus necesidades */
+.table {
+  list-style: none;
+  padding: 0;
+}
+
+.table li {
+  border: 1px solid #ddd;
+  margin: 5px 0;
+  padding: 10px;
+  display: inline-block;
+  background-color: white; /* Fondo blanco */
+}
